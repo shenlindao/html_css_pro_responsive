@@ -3,15 +3,19 @@
 
 @font-face {
     font-family: "Merriweather Sans";
-    src: url("/fonts/MerriweatherSans-VariableFont_wght.ttf");
+    src: url("/fonts/MerriweatherSans.ttf");
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("/fonts/RobotoCondensed.ttf");
 }
 @font-face {
     font-family: "Cousine";
-    src: url("/fonts/Cousine-Regular.ttf");
+    src: url("/fonts/CousineRegular.ttf");
 }
 @font-face {
-    font-family: "FontAwesome";
-    src: url("/fonts/fa-regular-400.ttf");
+    font-family: "Font Awesome";
+    src: url("/fonts/fontawesome-free-6.5.1-web/webfonts/fa-regular-400.ttf");
 }
 
 * {
@@ -163,18 +167,142 @@ a {
 }
 
 .slider {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
     width: 100%;
     height: 1070px;
     background-color: #cccccc;
+    &__content {
+        grid-column: 2 / span 1;
+    }
+    &__arrows {
+        @include flexWrap();
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &__arrow {
+        &_left {
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        &_right {
+            margin-right: 30px;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+    }
+    &__nav {
+        position: absolute;
+        bottom: 20px;
+        list-style: none;
+        width: 100%;
+        @include flexWrap();
+        justify-content: center;
+        gap: 10px;
+    }
+    &__circle {
+        width: 12px;
+        height: 12px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            background-color: #fff;
+        }
+    }
+    &__content {
+        @include flexWrap();
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        top: 35%;
+        left: 80px;
+    }
+    &__text1 {
+        font-family: "Cousine";
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #555555;
+        margin-bottom: 19px;
+    }
+    &__h1 {
+        font-family: "Merriweather Sans";
+        font-size: 100px;
+        line-height: 80px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.05);
+        color: #ffffff;
+        margin-bottom: 18px;
+    }
+    &__h2 {
+        font-family: "Roboto Condensed";
+        font-size: 35px;
+        line-height: 33px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4c4c4c;
+        margin-bottom: 29px;
+    }
+    &__text2 {
+        @include flexWrap();
+        align-items: center;
+        font-family: "Merriweather Sans";
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #333333;
+        i {
+            font-size: 12px;
+        }
+    }
 }
 
 @media screen and (max-width: 1140px) {
     .wrap {
         width: calc(100% - 40px);
     }
+    .slider {
+        height: 546px;
+        &__content {
+            top: 17%;
+            width: 385px;
+            left: 0;
+        }
+        &__text1 {
+            font-size: 25px;
+            line-height: 38px;
+            font-weight: 700;
+        }
+        &__h1 {
+            font-size: 85px;
+            line-height: 68px;
+            font-weight: 800;
+        }
+        &__h2 {
+            font-size: 30px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+        &__text2 {
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 700;
+            i {
+                font-size: 10px;
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 979px) {
     .header {
         &__block1-links li:last-child {
             display: none;
@@ -183,8 +311,7 @@ a {
             display: none;
         }
         &__bottom {
-            justify-content: center;
-            gap: 34px;
+            display: block;
         }
         &__search {
             position: absolute;
@@ -196,14 +323,38 @@ a {
             margin-left: 22px;
             position: absolute;
             left: 0;
+            top: 28px;
         }
         &__menu {
             margin-top: 102px;
+            justify-content: space-between;
+        }
+    }
+    .slider {
+        height: 428px;
+        &__content {
+            width: 340px;
+            left: -10%;
+        }
+        &__text1 {
+            font-size: 22px;
+            line-height: 34px;
+        }
+        &__h1 {
+            font-size: 75px;
+            line-height: 60px;
+        }
+        &__h2 {
+            font-size: 26px;
+            line-height: 25px;
+        }
+        &__circle {
+            display: none;
         }
     }
 }
 
-@media screen and (max-width: 724px) {
+@media screen and (max-width: 767px) {
     .header {
         &__top {
             justify-content: center;
@@ -251,8 +402,9 @@ a {
         }
         &__logo {
             margin: auto;
-            left: auto;
             top: 97px;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
         &__block1-links {
             justify-content: center;
@@ -279,10 +431,14 @@ a {
             }
         }
         &__cart {
-            font-family: 'Cousine';
+            font-family: "Cousine";
             img {
                 margin-right: 9px;
             }
         }
     }
+}
+
+@media screen and (max-width: 320px) {
+
 }

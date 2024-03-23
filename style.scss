@@ -221,6 +221,9 @@ a {
         position: absolute;
         top: 35%;
         left: 80px;
+        &_mobile {
+            display: none;
+        }
     }
     &__text1 {
         font-family: "Cousine";
@@ -401,10 +404,14 @@ a {
             margin-top: 253px;
         }
         &__logo {
+            @include flexWrap();
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
             margin: auto;
             top: 97px;
-            left: 50%;
-            transform: translate(-50%, 0);
+            width: 100%;
         }
         &__block1-links {
             justify-content: center;
@@ -437,8 +444,44 @@ a {
             }
         }
     }
-}
-
-@media screen and (max-width: 320px) {
-
+    .slider {
+        @include flexWrap();
+        height: 178px;
+        &__content {
+            display: none;
+        }
+        &__arrows {
+            display: none;
+        }
+        &__content {
+            &_mobile {
+                width: 100%;
+                @include flexWrap();
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &__h3 {
+            font-size: 34px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 13px;
+        }
+        &__h4 {
+            font-family: "Roboto Condensed";
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        &__h5 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
 }

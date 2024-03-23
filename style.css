@@ -236,6 +236,9 @@ a {
   top: 35%;
   left: 80px;
 }
+.slider__content_mobile {
+  display: none;
+}
 .slider__text1 {
   font-family: "Cousine";
   font-size: 30px;
@@ -409,10 +412,15 @@ a {
     margin-top: 253px;
   }
   .header__logo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     margin: auto;
     top: 97px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
   }
   .header__block1-links {
     justify-content: center;
@@ -445,5 +453,45 @@ a {
   }
   .header__cart img {
     margin-right: 9px;
+  }
+  .slider {
+    display: flex;
+    flex-wrap: wrap;
+    height: 178px;
+  }
+  .slider__content {
+    display: none;
+  }
+  .slider__arrows {
+    display: none;
+  }
+  .slider__content_mobile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider__h3 {
+    font-size: 34px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 13px;
+  }
+  .slider__h4 {
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 18px;
+  }
+  .slider__h5 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
   }
 }/*# sourceMappingURL=style.css.map */

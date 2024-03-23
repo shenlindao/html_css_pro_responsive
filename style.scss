@@ -253,7 +253,7 @@ a {
         color: #4c4c4c;
         margin-bottom: 29px;
     }
-    &__text2 {
+    &__link {
         @include flexWrap();
         align-items: center;
         font-family: "Merriweather Sans";
@@ -477,7 +477,7 @@ a {
             color: #fff;
             margin-bottom: 18px;
         }
-        &__h5 {
+        &__link2 {
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;

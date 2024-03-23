@@ -267,7 +267,7 @@ a {
   color: #4c4c4c;
   margin-bottom: 29px;
 }
-.slider__text2 {
+.slider__link {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -278,7 +278,7 @@ a {
   text-transform: uppercase;
   color: #333333;
 }
-.slider__text2 i {
+.slider__link i {
   font-size: 12px;
 }
 
@@ -488,7 +488,7 @@ a {
     color: #fff;
     margin-bottom: 18px;
   }
-  .slider__h5 {
+  .slider__link2 {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;

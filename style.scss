@@ -28,9 +28,14 @@ body {
 }
 
 .wrap {
-    max-width: 1140px;
+    max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+}
+
+.background {
+    width: 100%;
+    background-color: #f3f3f3;
 }
 
 a {
@@ -186,11 +191,9 @@ a {
     }
     &__arrow {
         &_left {
-            margin-left: 30px;
             cursor: pointer;
         }
         &_right {
-            margin-right: 30px;
             transform: rotate(180deg);
             cursor: pointer;
         }
@@ -268,7 +271,68 @@ a {
     }
 }
 
-@media screen and (max-width: 1140px) {
+.offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 470px repeat(2, 1fr);
+    gap: 30px;
+    height: 1090px;
+    padding: 60px 0;
+    &__exclusive {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: span 2;
+        grid-row: span 1;
+        background-color: $backgroundColor;
+    }
+    &__styles {
+        grid-row: span 2;
+        background-color: $backgroundColor;
+    }
+    &__jewelry {
+        grid-row: span 1;
+        grid-column: span 1;
+        background-color: $backgroundColor;
+    }
+    &__accessories {
+        grid-row: span 1;
+        grid-column: span 1;
+        background-color: $backgroundColor;
+    }
+    &__lookbook {
+        grid-row: span 2;
+        grid-column: span 1;
+        background-color: $backgroundColor;
+    }
+    &__news {
+        grid-row: span 1;
+        grid-column: span 1;
+        background-color: $backgroundColor;
+    }
+    &__border {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 30%);
+        height: calc(100% - 10%);
+        height: 210px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid rgba(255, 255, 255, 0.29);
+        margin-bottom: 79px;
+    }
+    &__link {
+        font-size: 14.1px;
+        line-height: 21px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 1170px) {
     .wrap {
         width: calc(100% - 40px);
     }

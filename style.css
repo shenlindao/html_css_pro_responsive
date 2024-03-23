@@ -24,9 +24,14 @@ body {
 }
 
 .wrap {
-  max-width: 1140px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+}
+
+.background {
+  width: 100%;
+  background-color: #f3f3f3;
 }
 
 a {
@@ -199,11 +204,9 @@ a {
   height: 100%;
 }
 .slider__arrow_left {
-  margin-left: 30px;
   cursor: pointer;
 }
 .slider__arrow_right {
-  margin-right: 30px;
   transform: rotate(180deg);
   cursor: pointer;
 }
@@ -282,7 +285,70 @@ a {
   font-size: 12px;
 }
 
-@media screen and (max-width: 1140px) {
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 470px repeat(2, 1fr);
+  gap: 30px;
+  height: 1090px;
+  padding: 60px 0;
+}
+.offers__exclusive {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+  grid-row: span 1;
+  background-color: #ccc;
+}
+.offers__styles {
+  grid-row: span 2;
+  background-color: #ccc;
+}
+.offers__jewelry {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-color: #ccc;
+}
+.offers__accessories {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-color: #ccc;
+}
+.offers__lookbook {
+  grid-row: span 2;
+  grid-column: span 1;
+  background-color: #ccc;
+}
+.offers__news {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-color: #ccc;
+}
+.offers__border {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 90%;
+  height: 210px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  margin-bottom: 79px;
+}
+.offers__link {
+  font-size: 14.1px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1170px) {
   .wrap {
     width: calc(100% - 40px);
   }

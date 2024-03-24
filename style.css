@@ -204,9 +204,11 @@ a {
   height: 100%;
 }
 .slider__arrow_left {
+  margin-left: 30px;
   cursor: pointer;
 }
 .slider__arrow_right {
+  margin-right: 30px;
   transform: rotate(180deg);
   cursor: pointer;
 }
@@ -288,7 +290,7 @@ a {
 .offers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 470px repeat(2, 1fr);
+  grid-template-rows: 430px repeat(2, 1fr);
   gap: 30px;
   height: 1090px;
   padding: 60px 0;
@@ -302,30 +304,169 @@ a {
   grid-column: span 2;
   grid-row: span 1;
   background-color: #ccc;
+  position: relative;
+}
+.offers__exclusive .slider__arrow_left,
+.offers__exclusive .slider__arrow_right {
+  width: 39px;
+}
+.offers__exclusive_text1 {
+  font-family: "Cousine";
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.offers__exclusive_text2 {
+  font-family: "Roboto Condensed";
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .offers__styles {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   grid-row: span 2;
   background-color: #ccc;
+  padding: 50px 0;
+  position: relative;
+}
+.offers__styles_text1 {
+  font-family: "Cousine";
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+.offers__styles_text2 {
+  font-family: "Merriweather Sans";
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333333;
+}
+.offers__styles_text3 {
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2f2f2f;
 }
 .offers__jewelry {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-row: span 1;
   grid-column: span 1;
   background-color: #ccc;
+  position: relative;
+}
+.offers__jewelry_text1 {
+  font-family: "Merriweather Sans";
+  font-size: 40px;
+  line-height: 65px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.offers__jewelry_text2 {
+  font-family: "Roboto Condensed";
+  font-size: 23px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .offers__accessories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-row: span 1;
   grid-column: span 1;
   background-color: #ccc;
+  position: relative;
+}
+.offers__accessories_text1 {
+  font-family: "Merriweather Sans";
+  font-size: 30px;
+  line-height: 65px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.offers__accessories_text2 {
+  font-family: "Roboto Condensed";
+  font-size: 25px;
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .offers__lookbook {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-row: span 2;
   grid-column: span 1;
   background-color: #ccc;
+  position: relative;
+}
+.offers__lookbook_text1 {
+  font-family: "Roboto Condensed";
+  font-size: 35px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.offers__lookbook_text2 {
+  font-family: "Cousine";
+  font-size: 18px;
+  line-height: 60px;
+  color: #ffffff;
+}
+.offers__lookbook_text3 {
+  font-family: "Cousine";
+  font-size: 30px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.offers__lookbook .offers__link {
+  bottom: 59px;
 }
 .offers__news {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-row: span 1;
   grid-column: span 1;
   background-color: #ccc;
+}
+.offers__news_text1 {
+  font-family: "Roboto Condensed";
+  font-size: 30px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .offers__border {
   display: flex;
@@ -333,12 +474,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
-  height: 90%;
+  width: 65%;
   height: 210px;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.29);
-  margin-bottom: 79px;
 }
 .offers__link {
   font-size: 14.1px;
@@ -346,6 +485,15 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+}
+.offers__box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1170px) {
@@ -354,6 +502,12 @@ a {
   }
   .slider {
     height: 546px;
+  }
+  .slider__arrow_left {
+    margin-left: 20px;
+  }
+  .slider__arrow_right {
+    margin-right: 20px;
   }
   .slider__content {
     top: 17%;

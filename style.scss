@@ -191,9 +191,11 @@ a {
     }
     &__arrow {
         &_left {
+            margin-left: 30px;
             cursor: pointer;
         }
         &_right {
+            margin-right: 30px;
             transform: rotate(180deg);
             cursor: pointer;
         }
@@ -274,7 +276,7 @@ a {
 .offers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 470px repeat(2, 1fr);
+    grid-template-rows: 430px repeat(2, 1fr);
     gap: 30px;
     height: 1090px;
     padding: 60px 0;
@@ -286,42 +288,174 @@ a {
         grid-column: span 2;
         grid-row: span 1;
         background-color: $backgroundColor;
+        position: relative;
+        .slider__arrow_left,
+        .slider__arrow_right {
+            width: 39px;
+        }
+        &_text1 {
+            font-family: "Cousine";
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        &_text2 {
+            font-family: "Roboto Condensed";
+            font-size: 25px;
+            line-height: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
     }
     &__styles {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         grid-row: span 2;
         background-color: $backgroundColor;
+        padding: 50px 0;
+        position: relative;
+        &_text1 {
+            font-family: "Cousine";
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #2f2f2f;
+        }
+        &_text2 {
+            font-family: "Merriweather Sans";
+            font-size: 25px;
+            line-height: 40px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #333333;
+        }
+        &_text3 {
+            font-family: "Roboto Condensed";
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2f2f2f;
+        }
     }
     &__jewelry {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         grid-row: span 1;
         grid-column: span 1;
         background-color: $backgroundColor;
+        position: relative;
+        &_text1 {
+            font-family: "Merriweather Sans";
+            font-size: 40px;
+            line-height: 65px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        &_text2 {
+            font-family: "Roboto Condensed";
+            font-size: 23px;
+            line-height: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
     }
     &__accessories {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         grid-row: span 1;
         grid-column: span 1;
         background-color: $backgroundColor;
+        position: relative;
+        &_text1 {
+            font-family: "Merriweather Sans";
+            font-size: 30px;
+            line-height: 65px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        &_text2 {
+            font-family: "Roboto Condensed";
+            font-size: 25px;
+            line-height: 22px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
     }
     &__lookbook {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         grid-row: span 2;
         grid-column: span 1;
         background-color: $backgroundColor;
+        position: relative;
+        &_text1 {
+            font-family: "Roboto Condensed";
+            font-size: 35px;
+            line-height: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        &_text2 {
+            font-family: "Cousine";
+            font-size: 18px;
+            line-height: 60px;
+            color: #ffffff;
+        }
+        &_text3 {
+            font-family: "Cousine";
+            font-size: 30px;
+            line-height: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        .offers__link {
+            bottom: 59px;
+        }
     }
     &__news {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         grid-row: span 1;
         grid-column: span 1;
         background-color: $backgroundColor;
+        &_text1 {
+            font-family: "Roboto Condensed";
+            font-size: 30px;
+            line-height: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
     }
     &__border {
         @include flexWrap();
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: calc(100% - 30%);
-        height: calc(100% - 10%);
+        width: 65%;
         height: 210px;
         background-color: rgba(0, 0, 0, 0);
         border: 1px solid rgba(255, 255, 255, 0.29);
-        margin-bottom: 79px;
     }
     &__link {
         font-size: 14.1px;
@@ -329,6 +463,14 @@ a {
         font-weight: 700;
         text-transform: uppercase;
         color: #ffffff;
+        position: absolute;
+        bottom: 20px;
+    }
+    &__box {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -338,6 +480,14 @@ a {
     }
     .slider {
         height: 546px;
+        &__arrow {
+            &_left {
+                margin-left: 20px;
+            }
+            &_right {
+                margin-right: 20px;
+            }
+        }
         &__content {
             top: 17%;
             width: 385px;

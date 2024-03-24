@@ -517,6 +517,85 @@ a {
             }
         }
     }
+    .offers {
+        grid-template-rows: 346px repeat(2, 1fr);
+        gap: 20px;
+        height: 792px;
+        padding: 30px 0;
+        &__exclusive {
+            &_text1 {
+                font-size: 22px;
+                line-height: 33px;
+            }
+            &_text2 {
+                font-size: 22px;
+                line-height: 33px;
+            }
+        }
+        &__jewelry {
+            &_text1 {
+                font-size: 32.5px;
+                line-height: 17px;
+            }
+            &_text2 {
+                font-size: 18.7px;
+                line-height: 46px;
+            }
+            .offers__link {
+                bottom: 53px;
+            }
+        }
+        &__accessories {
+            &_text1 {
+                font-size: 25px;
+                line-height: 17px;
+            }
+            &_text2 {
+                font-size: 20px;
+                line-height: 42px;
+            }
+            .offers__link {
+                bottom: 53px;
+            }
+        }
+        &__lookbook {
+            &_text1 {
+                font-size: 30px;
+                line-height: 19px;
+            }
+            &_text2 {
+                font-size: 15px;
+                line-height: 35px;
+            }
+            &_text3 {
+                font-size: 27px;
+                line-height: 26px;
+            }
+            .offers__link {
+                bottom: 53px;
+            }
+        }
+        &__styles {
+            &_text1 {
+                font-size: 15px;
+                line-height: 31px;
+            }
+            &_text2 {
+                font-size: 20px;
+                line-height: 31px;
+            }
+            &_text3 {
+                font-size: 15px;
+                line-height: 31px;
+            }
+        }
+        &__news {
+            &_text1 {
+                font-size: 28px;
+                line-height: 22px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 979px) {

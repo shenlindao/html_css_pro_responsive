@@ -496,6 +496,240 @@ a {
   justify-content: center;
 }
 
+.catalog {
+  margin-bottom: 121px;
+}
+.catalog__titles {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 70px;
+  margin: 51px 0;
+}
+.catalog__section {
+  font-family: "Merriweather Sans";
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #999999;
+  padding-bottom: 9px;
+  cursor: pointer;
+}
+.catalog__section:first-child {
+  color: #444444;
+  border-bottom: 2px solid #444444;
+}
+.catalog__cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+}
+.catalog__show-more {
+  display: flex;
+  font-family: "Merriweather Sans";
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555555;
+  margin-top: 30px;
+}
+.catalog__show-more::before, .catalog__show-more::after {
+  display: block;
+  flex-grow: 1;
+  height: inherit;
+}
+.catalog__show-more span {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  line-height: 0.8;
+  font-size: 14px;
+}
+.catalog__show-more span::before, .catalog__show-more span::after {
+  content: "";
+  display: block;
+  width: 520px;
+  height: 2px;
+  background-color: #dddddd;
+  transform: translateY(-250%);
+  border-radius: 0.3rem;
+}
+.catalog__show-more span::before {
+  margin-right: 0.4rem;
+}
+.catalog__show-more span::after {
+  margin-left: 0.4rem;
+}
+.catalog__show-more a {
+  color: #555555;
+}
+
+.product {
+  width: 270px;
+  height: 473px;
+}
+.product:hover .product__colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product:hover .product__buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product:hover .product__bottom_bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product:hover .product__rate {
+  display: none;
+}
+.product__picture {
+  width: 100%;
+  height: 351px;
+  background-color: #ccc;
+  position: relative;
+}
+.product__flag {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  background-color: rgba(207, 70, 71, 0);
+  font-family: Arial;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 900;
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  text-align: center;
+}
+.product__flag_50 {
+  border: 3px solid #cf4647;
+  color: #cf4647;
+}
+.product__flag_new {
+  color: #524656;
+  border: 3px solid #524656;
+}
+.product__flag_stock {
+  width: 90px;
+  height: 42px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 14px;
+  color: #999999;
+  border: 3px solid #999999;
+}
+.product__colors {
+  display: none;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.product__color {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #555555;
+  box-shadow: inset 0px 0px 0px 2px #ffffff;
+}
+.product__color_black {
+  background-color: #0e0c0f;
+}
+.product__color_blue {
+  background-color: #202a4e;
+}
+.product__color_red {
+  background-color: #923349;
+}
+.product__bottom {
+  margin-top: 24px;
+}
+.product__bottom_top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product__bottom_right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 7px;
+}
+.product__bottom_bottom {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+.product__name, .product__category {
+  font-family: "Merriweather Sans";
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #444444;
+}
+.product__star {
+  font-size: 12px;
+  color: #d0d0d0;
+}
+.product__star_fill {
+  color: #777777;
+}
+.product__price {
+  font-family: "Cousine";
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #222222;
+}
+.product__price_old {
+  color: #999999;
+  text-decoration: line-through;
+}
+.product__buttons {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 34px;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  margin-top: 9px;
+}
+.product__add-to-bag, .product__more-info {
+  font-family: "Merriweather Sans";
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444444;
+}
+.product__add-to-bag:hover, .product__more-info:hover {
+  color: #cf4647;
+}
+.product__add-to-wish, .product__add-to-compare {
+  font-family: "Merriweather Sans";
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  font-style: italic;
+  color: #333333;
+}
+.product__add-to-wish:hover, .product__add-to-compare:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1170px) {
   .wrap {
     width: calc(100% - 40px);

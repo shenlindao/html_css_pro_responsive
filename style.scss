@@ -474,6 +474,241 @@ a {
     }
 }
 
+.catalog {
+    margin-bottom: 121px;
+    &__titles {
+        @include flexWrap();
+        flex-direction: row;
+        justify-content: center;
+        gap: 70px;
+        margin: 51px 0;
+    }
+    &__section {
+        font-family: "Merriweather Sans";
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #999999;
+        padding-bottom: 9px;
+        cursor: pointer;
+        &:first-child {
+            color: #444444;
+            border-bottom: 2px solid #444444;
+        }
+    }
+    &__cards {
+        @include flexWrap();
+        flex-direction: row;
+        gap: 30px;
+    }
+    &__show-more {
+        display: flex;
+        font-family: "Merriweather Sans";
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #555555;
+        margin-top: 30px;
+        &::before,
+        &::after {
+            display: block;
+            flex-grow: 1;
+            height: inherit;
+        }
+        & span {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            line-height: 0.8;
+            font-size: 14px;
+        }
+        & span::before,
+        & span::after {
+            content: "";
+            display: block;
+            width: 520px;
+            height: 2px;
+            background-color: #dddddd;
+            transform: translateY(-250%);
+            border-radius: 0.3rem;
+        }
+        & span::before {
+            margin-right: 0.4rem;
+        }
+        & span::after {
+            margin-left: 0.4rem;
+        }
+        & a {
+            color: #555555;
+        }
+    }
+}
+
+.product {
+    width: 270px;
+    height: 473px;
+    &:hover {
+        .product__colors {
+            @include flexWrap();
+        }
+        .product__buttons {
+            @include flexWrap();
+        }
+        .product__bottom_bottom {
+            @include flexWrap();
+        }
+        .product__rate {
+            display: none;
+        }
+    }
+    &__picture {
+        width: 100%;
+        height: 351px;
+        background-color: $backgroundColor;
+        position: relative;
+    }
+    &__flag {
+        @include flexWrap();
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 30px;
+        background-color: rgba(207, 70, 71, 0);
+        font-family: Arial;
+        text-transform: uppercase;
+        font-size: 17px;
+        line-height: 17px;
+        font-weight: 900;
+        position: absolute;
+        top: 10px;
+        left: -3px;
+        text-align: center;
+        &_50 {
+            border: 3px solid #cf4647;
+            color: #cf4647;
+        }
+        &_new {
+            color: #524656;
+            border: 3px solid #524656;
+        }
+        &_stock {
+            width: 90px;
+            height: 42px;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            color: #999999;
+            border: 3px solid #999999;
+        }
+    }
+    &__colors {
+        display: none;
+        flex-direction: row;
+        gap: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+    &__color {
+        width: 25px;
+        height: 25px;
+        border: 1px solid #555555;
+        box-shadow: inset 0px 0px 0px 2px #ffffff;
+        &_black {
+            background-color: #0e0c0f;
+        }
+        &_blue {
+            background-color: #202a4e;
+        }
+        &_red {
+            background-color: #923349;
+        }
+    }
+    &__bottom {
+        margin-top: 24px;
+        &_top {
+            @include flexWrap();
+            justify-content: space-between;
+        }
+        &_left {
+        }
+        &_right {
+            @include flexWrap();
+            flex-direction: column;
+            gap: 7px;
+        }
+        &_bottom {
+            display: none;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 9px;
+        }
+    }
+    &__name,
+    &__category {
+        font-family: "Merriweather Sans";
+        font-size: 13px;
+        line-height: 19px;
+        font-weight: 400;
+        color: #444444;
+    }
+    &__star {
+        font-size: 12px;
+        color: #d0d0d0;
+        &_fill {
+            color: #777777;
+        }
+    }
+    &__price {
+        font-family: "Cousine";
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: 700;
+        color: #222222;
+        &_old {
+            color: #999999;
+            text-decoration: line-through;
+        }
+    }
+    &__buttons {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 34px;
+        background-color: #ffffff;
+        border: 2px solid #444444;
+        margin-top: 9px;
+    }
+    &__add-to-bag,
+    &__more-info {
+        font-family: "Merriweather Sans";
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #444444;
+        &:hover {
+            color: #cf4647;
+        }
+    }
+    &__add-to-wish,
+    &__add-to-compare {
+        font-family: "Merriweather Sans";
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 400;
+        font-style: italic;
+        color: #333333;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 @media screen and (max-width: 1170px) {
     .wrap {
         width: calc(100% - 40px);

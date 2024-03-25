@@ -653,6 +653,78 @@ a {
   .slider__circle {
     display: none;
   }
+  .offers {
+    grid-template-rows: 266px repeat(2, 1fr);
+    height: 624px;
+  }
+  .offers__exclusive_text1 {
+    font-size: 26px;
+    line-height: 25px;
+  }
+  .offers__exclusive_text2 {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .offers__jewelry_text1 {
+    font-size: 25px;
+    line-height: 14px;
+  }
+  .offers__jewelry_text2 {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  .offers__jewelry .offers__link {
+    bottom: 20px;
+  }
+  .offers__accessories_text1 {
+    font-size: 20.1px;
+    line-height: 14px;
+  }
+  .offers__accessories_text2 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .offers__accessories .offers__link {
+    bottom: 20px;
+  }
+  .offers__lookbook {
+    justify-content: flex-start;
+    padding: 74px 0;
+  }
+  .offers__lookbook_text1 {
+    font-size: 30px;
+    line-height: 19px;
+  }
+  .offers__lookbook_text2 {
+    font-size: 15px;
+    line-height: 35px;
+  }
+  .offers__lookbook_text3 {
+    font-size: 27px;
+    line-height: 26px;
+  }
+  .offers__lookbook .offers__link {
+    bottom: 53px;
+  }
+  .offers__styles {
+    padding: 24px 0;
+  }
+  .offers__styles_text1 {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .offers__styles_text2 {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .offers__styles_text3 {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .offers__news_text1 {
+    font-size: 28px;
+    line-height: 22px;
+  }
 }
 @media screen and (max-width: 767px) {
   .header__top {
@@ -780,5 +852,119 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+  }
+  .offers {
+    grid-template-columns: 1fr;
+    grid-template-rows: 156px 537px repeat(2, 1fr) 401px 1fr;
+    gap: 10px;
+    padding: 20px 0;
+    height: 1661px;
+  }
+  .offers__exclusive {
+    order: 1;
+    grid-column: span 1;
+    grid-row: span 1;
+    justify-content: space-between;
+  }
+  .offers__exclusive_text1 {
+    font-size: 21px;
+    line-height: 40px;
+  }
+  .offers__exclusive_text2 {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .offers__exclusive .offers__link {
+    bottom: 6px;
+  }
+  .offers__jewelry {
+    order: 3;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .offers__jewelry_text1 {
+    font-size: 35px;
+    line-height: 28px;
+  }
+  .offers__jewelry_text2 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .offers__jewelry .offers__link {
+    bottom: 10px;
+  }
+  .offers__accessories {
+    order: 4;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .offers__accessories_text1 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .offers__accessories_text2 {
+    font-size: 21px;
+    line-height: 40px;
+  }
+  .offers__accessories .offers__link {
+    bottom: 10px;
+  }
+  .offers__lookbook {
+    order: 5;
+    grid-column: span 1;
+    grid-row: span 1;
+    justify-content: center;
+  }
+  .offers__lookbook_text1 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .offers__lookbook_text2 {
+    font-size: 18px;
+    line-height: 35px;
+  }
+  .offers__lookbook_text3 {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 70px;
+  }
+  .offers__lookbook .offers__link {
+    bottom: 53px;
+  }
+  .offers__lookbook .slider__circle {
+    display: block;
+    width: 10px;
+    height: 10px;
+  }
+  .offers__styles {
+    order: 2;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .offers__styles_text1 {
+    font-size: 14.3px;
+    line-height: 25px;
+  }
+  .offers__styles_text2 {
+    font-size: 19.8px;
+    line-height: 25px;
+  }
+  .offers__styles_text3 {
+    font-size: 15.8px;
+    line-height: 25px;
+  }
+  .offers__news {
+    order: 6;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .offers__news_text1 {
+    font-size: 28px;
+    line-height: 22px;
+  }
+  .offers__border {
+    width: 90%;
+    height: 112px;
+    margin-top: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

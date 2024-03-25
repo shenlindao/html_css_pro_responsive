@@ -648,6 +648,86 @@ a {
             display: none;
         }
     }
+    .offers {
+        grid-template-rows: 266px repeat(2, 1fr);
+        height: 624px;
+        &__exclusive {
+            &_text1 {
+                font-size: 26px;
+                line-height: 25px;
+            }
+            &_text2 {
+                font-size: 17px;
+                line-height: 25px;
+            }
+        }
+        &__jewelry {
+            &_text1 {
+                font-size: 25px;
+                line-height: 14px;
+            }
+            &_text2 {
+                font-size: 15px;
+                line-height: 40px;
+            }
+            .offers__link {
+                bottom: 20px;
+            }
+        }
+        &__accessories {
+            &_text1 {
+                font-size: 20.1px;
+                line-height: 14px;
+            }
+            &_text2 {
+                font-size: 16px;
+                line-height: 40px;
+            }
+            .offers__link {
+                bottom: 20px;
+            }
+        }
+        &__lookbook {
+            justify-content: flex-start;
+            padding: 74px 0;
+            &_text1 {
+                font-size: 30px;
+                line-height: 19px;
+            }
+            &_text2 {
+                font-size: 15px;
+                line-height: 35px;
+            }
+            &_text3 {
+                font-size: 27px;
+                line-height: 26px;
+            }
+            .offers__link {
+                bottom: 53px;
+            }
+        }
+        &__styles {
+            padding: 24px 0;
+            &_text1 {
+                font-size: 13px;
+                line-height: 25px;
+            }
+            &_text2 {
+                font-size: 17px;
+                line-height: 25px;
+            }
+            &_text3 {
+                font-size: 13px;
+                line-height: 25px;
+            }
+        }
+        &__news {
+            &_text1 {
+                font-size: 28px;
+                line-height: 22px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -775,6 +855,120 @@ a {
             font-weight: 700;
             text-transform: uppercase;
             color: #fff;
+        }
+    }
+    .offers {
+        grid-template-columns: 1fr;
+        grid-template-rows: 156px 537px repeat(2, 1fr) 401px 1fr;
+        gap: 10px;
+        padding: 20px 0;
+        height: 1661px;
+        &__exclusive {
+            order: 1;
+            grid-column: span 1;
+            grid-row: span 1;
+            justify-content: space-between;
+            &_text1 {
+                font-size: 21px;
+                line-height: 40px;
+            }
+            &_text2 {
+                font-size: 15px;
+                line-height: 25px;
+            }
+            .offers__link {
+                bottom: 6px;
+            }
+        }
+        &__jewelry {
+            order: 3;
+            grid-column: span 1;
+            grid-row: span 1;
+            &_text1 {
+                font-size: 35px;
+                line-height: 28px;
+            }
+            &_text2 {
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .offers__link {
+                bottom: 10px;
+            }
+        }
+        &__accessories {
+            order: 4;
+            grid-column: span 1;
+            grid-row: span 1;
+            &_text1 {
+                font-size: 25px;
+                line-height: 28px;
+            }
+            &_text2 {
+                font-size: 21px;
+                line-height: 40px;
+            }
+            .offers__link {
+                bottom: 10px;
+            }
+        }
+        &__lookbook {
+            order: 5;
+            grid-column: span 1;
+            grid-row: span 1;
+            justify-content: center;
+            &_text1 {
+                font-size: 35px;
+                line-height: 40px;
+            }
+            &_text2 {
+                font-size: 18px;
+                line-height: 35px;
+            }
+            &_text3 {
+                font-size: 30px;
+                line-height: 40px;
+                padding-bottom: 70px;
+            }
+            .offers__link {
+                bottom: 53px;
+            }
+            .slider__circle {
+                display: block;
+                width: 10px;
+                height: 10px;
+            }
+        }
+        &__styles {
+            order: 2;
+            grid-column: span 1;
+            grid-row: span 1;
+            &_text1 {
+                font-size: 14.3px;
+                line-height: 25px;
+            }
+            &_text2 {
+                font-size: 19.8px;
+                line-height: 25px;
+            }
+            &_text3 {
+                font-size: 15.8px;
+                line-height: 25px;
+            }
+        }
+        &__news {
+            order: 6;
+            grid-column: span 1;
+            grid-row: span 1;
+            &_text1 {
+                font-size: 28px;
+                line-height: 22px;
+            }
+        }
+        &__border {
+            width: 90%;
+            height: 112px;
+            margin-top: 10px;
         }
     }
 }

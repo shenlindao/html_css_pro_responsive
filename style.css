@@ -14,6 +14,10 @@
   font-family: "Font Awesome";
   src: url("/fonts/fontawesome-free-6.5.1-web/webfonts/fa-regular-400.ttf");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -844,6 +848,20 @@ footer .footer__social_mail:hover {
   border: 2px solid #dd4b4b;
   background-image: url("./img/socials/act/mail.png");
   background-color: #dd4b4b;
+}
+
+.arrow-up {
+  background-image: url("./img/arrow-dark.svg");
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(224, 224, 224, 0);
+  border: 3px solid #ffffff;
+  transform: rotate(90deg);
+  position: fixed;
+  right: 85px;
+  bottom: 38px;
+  border: 0;
 }
 
 @media screen and (max-width: 1170px) {

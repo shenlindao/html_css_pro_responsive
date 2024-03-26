@@ -544,25 +544,19 @@ a {
 }
 .catalog__show-more span {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   line-height: 0.8;
   font-size: 14px;
+  width: 100%;
 }
 .catalog__show-more span::before, .catalog__show-more span::after {
   content: "";
   display: block;
-  width: 520px;
-  height: 2px;
+  width: 45%;
+  height: 1px;
   background-color: #dddddd;
-  transform: translateY(-250%);
   border-radius: 0.3rem;
-}
-.catalog__show-more span::before {
-  margin-right: 0.4rem;
-}
-.catalog__show-more span::after {
-  margin-left: 0.4rem;
 }
 .catalog__show-more a {
   color: #555555;
@@ -838,6 +832,26 @@ a {
     font-size: 28px;
     line-height: 22px;
   }
+  .catalog {
+    margin-bottom: 100px;
+  }
+  .catalog__cards {
+    justify-content: center;
+    gap: 20px;
+  }
+  .catalog__show-more span::before, .catalog__show-more span::after {
+    width: 43%;
+  }
+  .product {
+    width: 300px;
+    height: 504px;
+  }
+  .product__picture {
+    height: 351px;
+  }
+  .product:nth-child(n+7) {
+    display: none;
+  }
 }
 @media screen and (max-width: 979px) {
   .header__block1-links li:last-child {
@@ -958,6 +972,28 @@ a {
   .offers__news_text1 {
     font-size: 28px;
     line-height: 22px;
+  }
+  .catalog__show-more span::before, .catalog__show-more span::after {
+    width: 41%;
+  }
+  .product {
+    width: 228px;
+    height: 410px;
+  }
+  .product__picture {
+    height: 296px;
+  }
+  .product:nth-child(n+7) {
+    display: none;
+  }
+  .product__bottom {
+    margin-top: 19px;
+  }
+  .product__bottom_bottom {
+    margin-top: 5px;
+  }
+  .product__buttons {
+    margin-top: 5px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1200,5 +1236,29 @@ a {
     width: 90%;
     height: 112px;
     margin-top: 10px;
+  }
+  .catalog {
+    margin-bottom: 80px;
+  }
+  .catalog__cards {
+    gap: 47px;
+  }
+  .catalog__titles {
+    gap: 19px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+    margin: 31px 0;
+  }
+  .catalog__show-more span::before, .catalog__show-more span::after {
+    width: 30%;
+  }
+  .product {
+    width: 280px;
+    height: 478px;
+  }
+  .product__picture {
+    height: 364px;
   }
 }/*# sourceMappingURL=style.css.map */

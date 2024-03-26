@@ -712,6 +712,138 @@ footer {
         background-color: #1f1f1f;
     }
     .footer {
+        &__main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 399px 1fr;
+            margin-top: 30px;
+        }
+        &__column {
+            border-right: 2px dotted #2a2a2a;
+            &_left {
+            }
+            &_center {
+            }
+            &_right {
+                border-right: none;
+            }
+        }
+        &__content {
+            @include flexWrap();
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 450px;
+        }
+        &__inner {
+            font-family: "Cousine";
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #999999;
+            width: min-content;
+        }
+        &__arrows {
+            @include flexWrap();
+            flex-direction: row;
+            gap: 5px;
+        }
+        &__arrow {
+            width: 20px;
+            height: 20px;
+            &_right {
+                transform: rotate(180deg);
+            }
+        }
+        &__img {
+            background-color: $backgroundColor;
+            margin-bottom: 20px;
+            &_180 {
+                width: 180px;
+                height: 180px;
+            }
+            &_205 {
+                width: 205px;
+                height: 150px;
+            }
+            &_map {
+                width: 215px;
+                height: 215px;
+                background-image: url("./img/footer/map.png");
+            }
+        }
+        &__block {
+            @include flexWrap();
+            flex-direction: column;
+            align-content: flex-end;
+            padding-right: 25px;
+            padding-bottom: 60px;
+            border-bottom: 2px dotted #2a2a2a;
+        }
+        &__title {
+            @include flexWrap();
+            justify-content: space-between;
+            margin-top: 60px;
+            margin-bottom: 34px;
+            font-family: "Cousine";
+            font-size: 17px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #b6b6b6;
+        }
+        &__text {
+            @include flexWrap();
+            flex-direction: column;
+            gap: 15px;
+            width: 247px;
+            font-family: "Arial";
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #888888;
+        }
+        &__form {
+            @include flexWrap();
+            flex-direction: column;
+            gap: 10px;
+            width: 215px;
+            margin-bottom: 20px;
+            input {
+                height: 30px;
+                padding: 0 12px;
+            }
+            textarea {
+                height: 135px;
+                padding: 11px 12px;
+            }
+            input,
+            textarea {
+                font-family: "Cousine";
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #888888;
+                border: 1px solid #666666;
+                background-color: transparent;
+                resize: none;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        &__link {
+            font-family: "Merriweather Sans";
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #b6b6b6;
+            &_submit {
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
         &__bottom {
             @include flexWrap();
             flex-direction: row;

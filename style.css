@@ -1553,6 +1553,59 @@ footer .promo__reply, footer .promo__retweet {
   .product__buttons {
     margin-top: 5px;
   }
+  footer .footer__main {
+    grid-template-columns: 1fr 247px 1fr;
+  }
+  footer .footer__column_left .footer__block {
+    padding-right: 14px;
+  }
+  footer .footer__column_right .footer__block {
+    padding-left: 14px;
+  }
+  footer .footer__column__center__block {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  footer .footer__column .footer__inner_right {
+    display: none;
+  }
+  footer .footer__block_from .footer__inner_right {
+    display: none;
+  }
+  footer .footer__block2 {
+    margin-right: 0;
+  }
+  footer .footer__img_60 {
+    border: 3px solid #2f2f2f;
+  }
+  footer .footer__img_150 {
+    width: 218px;
+    height: 285px;
+  }
+  footer .footer__img_180 {
+    width: 120px;
+    height: 120px;
+  }
+  footer .footer__img_205 {
+    width: 280px;
+    height: 205px;
+  }
+  footer .footer__img_map {
+    margin-bottom: 10px;
+  }
+  footer .footer__inner {
+    font-size: 15px;
+  }
+  footer .footer__facebook {
+    gap: 8px;
+  }
+  footer .footer__payments {
+    gap: 8px;
+    margin-bottom: 0;
+  }
+  footer .promo__date {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (max-width: 767px) {
   .header__top {

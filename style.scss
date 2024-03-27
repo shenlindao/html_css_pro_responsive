@@ -1359,7 +1359,7 @@ footer {
             }
             &__img {
                 &_60 {
-                    &:nth-child(n+7) {
+                    &:nth-child(n + 7) {
                         display: none;
                     }
                 }
@@ -1567,6 +1567,79 @@ footer {
         }
         &__buttons {
             margin-top: 5px;
+        }
+    }
+    footer {
+        .footer {
+            &__main {
+                grid-template-columns: 1fr 247px 1fr;
+            }
+            &__column {
+                &_left {
+                    .footer__block {
+                        padding-right: 14px;
+                    }
+                }
+                &_right {
+                    .footer__block {
+                        padding-left: 14px;
+                    }
+                }
+                &__center {
+                    &__block {
+                        padding-right: 14px;
+                        padding-left: 14px;
+                    }
+                }
+                .footer__inner_right {
+                    display: none;
+                }
+            }
+            &__block {
+                &_from {
+                    .footer__inner_right {
+                        display: none;
+                    }
+                }
+            }
+            &__block2 {
+                margin-right: 0;
+            }
+            &__img {
+                &_60 {
+                    border: 3px solid #2f2f2f;
+                }
+                &_150 {
+                    width: 218px;
+                    height: 285px;
+                }
+                &_180 {
+                    width: 120px;
+                    height: 120px;
+                }
+                &_205 {
+                    width: 280px;
+                    height: 205px;
+                }
+                &_map {
+                    margin-bottom: 10px;
+                }
+            }
+            &__inner {
+                font-size: 15px;
+            }
+            &__facebook {
+                gap: 8px;
+            }
+            &__payments {
+                gap: 8px;
+                margin-bottom: 0;
+            }
+        }
+        .promo {
+            &__date {
+                margin-bottom: 10px;
+            }
         }
     }
 }

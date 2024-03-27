@@ -734,7 +734,7 @@ footer .background {
 footer .footer__main {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 399px 1fr;
+  grid-template-columns: 1fr 399px 0.7fr;
   margin-top: 30px;
   border-bottom: 2px dotted #2a2a2a;
 }
@@ -742,6 +742,7 @@ footer .footer__column {
   border-right: 2px dotted #2a2a2a;
 }
 footer .footer__column_left {
+  justify-self: end;
   max-width: 475px;
 }
 footer .footer__column_left .footer__block {
@@ -754,8 +755,11 @@ footer .footer__column_center .footer__block {
 footer .footer__column_center .footer__block:nth-child(2) {
   padding-bottom: 6px;
 }
-footer .footer__column_right .footer__block {
+footer .footer__column_right {
+  justify-self: start;
   border-right: none;
+}
+footer .footer__column_right .footer__block {
   padding-left: 25px;
   align-content: flex-start;
 }
@@ -776,6 +780,9 @@ footer .footer__inner {
   color: #999999;
   width: -moz-min-content;
   width: min-content;
+}
+footer .footer__inner_right {
+  margin-left: 20px;
 }
 footer .footer__arrows {
   display: flex;

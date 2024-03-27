@@ -721,10 +721,14 @@ footer {
         &__column {
             border-right: 2px dotted #2a2a2a;
             &_left {
+                padding-right: 25px;
             }
             &_center {
+                padding-right: 25px;
+                padding-left: 25px;
             }
             &_right {
+                padding-left: 25px;
                 border-right: none;
             }
         }
@@ -759,6 +763,10 @@ footer {
         &__img {
             background-color: $backgroundColor;
             margin-bottom: 20px;
+            &_150 {
+                width: 150px;
+                height: 195px;
+            }
             &_180 {
                 width: 180px;
                 height: 180px;
@@ -773,11 +781,33 @@ footer {
                 background-image: url("./img/footer/map.png");
             }
         }
+        &__prod {
+            @include flexWrap();
+            flex-direction: row;
+            justify-content: space-between;
+            text-transform: none;
+            &_name {
+                font-family: "Merriweather Sans";
+                font-size: 12px;
+                font-weight: 400;
+                color: #888888;
+                max-width: 100px;
+            }
+            &_price {
+                font-family: "Cousine";
+                font-size: 14px;
+                font-weight: 400;
+                color: #ffffff;
+                &_old {
+                    color: #8c8b8b;
+                    margin-bottom: 3px;
+                }
+            }
+        }
         &__block {
             @include flexWrap();
             flex-direction: column;
             align-content: flex-end;
-            padding-right: 25px;
             padding-bottom: 60px;
             border-bottom: 2px dotted #2a2a2a;
         }
@@ -791,6 +821,19 @@ footer {
             font-weight: 400;
             text-transform: uppercase;
             color: #b6b6b6;
+        }
+        &__button {
+            font-family: "Merriweather Sans";
+            font-size: 12.1px;
+            line-height: 26px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #b5b5b5;
+            width: 70px;
+            height: 22px;
+            background-color: rgba(250, 250, 250, 0);
+            border: 1px solid #b5b5b5;
+            text-align: center;
         }
         &__text {
             @include flexWrap();
@@ -957,6 +1000,70 @@ footer {
                     background-color: #dd4b4b;
                 }
             }
+        }
+    }
+    .promo {
+        margin-bottom: 44px;
+        &__header {
+            @include flexWrap();
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+        &__img {
+            width: 32px;
+            height: 32px;
+        }
+        &__title {
+            & span {
+                font-family: "Roboto Condensed";
+                font-size: 17.1px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #b1b1b1;
+            }
+        }
+        &__link {
+            font-family: "Arial";
+            font-size: 13.1px;
+            font-weight: 400;
+            color: #777777;
+            text-transform: none;
+        }
+        &__text {
+            font-family: Arial;
+            font-size: 14.1px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #888888;
+            & span {
+                color: $backgroundColor;
+            }
+        }
+        &__bottom {
+            @include flexWrap();
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: "Arial";
+            font-size: 13.1px;
+            font-weight: 400;
+            color: #666666;
+            width: 100%;
+            margin-top: 18px;
+        }
+        &__forward {
+            @include flexWrap();
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+        &__reply,
+        &__retweet {
+            @include flexWrap();
+            align-items: center;
+            color: #666666;
         }
     }
 }

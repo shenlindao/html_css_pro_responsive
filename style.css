@@ -740,7 +740,15 @@ footer .footer__main {
 footer .footer__column {
   border-right: 2px dotted #2a2a2a;
 }
+footer .footer__column_left {
+  padding-right: 25px;
+}
+footer .footer__column_center {
+  padding-right: 25px;
+  padding-left: 25px;
+}
 footer .footer__column_right {
+  padding-left: 25px;
   border-right: none;
 }
 footer .footer__content {
@@ -778,6 +786,10 @@ footer .footer__img {
   background-color: #ccc;
   margin-bottom: 20px;
 }
+footer .footer__img_150 {
+  width: 150px;
+  height: 195px;
+}
 footer .footer__img_180 {
   width: 180px;
   height: 180px;
@@ -791,12 +803,35 @@ footer .footer__img_map {
   height: 215px;
   background-image: url("./img/footer/map.png");
 }
+footer .footer__prod {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: none;
+}
+footer .footer__prod_name {
+  font-family: "Merriweather Sans";
+  font-size: 12px;
+  font-weight: 400;
+  color: #888888;
+  max-width: 100px;
+}
+footer .footer__prod_price {
+  font-family: "Cousine";
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+footer .footer__prod_price_old {
+  color: #8c8b8b;
+  margin-bottom: 3px;
+}
 footer .footer__block {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-end;
-  padding-right: 25px;
   padding-bottom: 60px;
   border-bottom: 2px dotted #2a2a2a;
 }
@@ -811,6 +846,19 @@ footer .footer__title {
   font-weight: 400;
   text-transform: uppercase;
   color: #b6b6b6;
+}
+footer .footer__button {
+  font-family: "Merriweather Sans";
+  font-size: 12.1px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #b5b5b5;
+  width: 70px;
+  height: 22px;
+  background-color: rgba(250, 250, 250, 0);
+  border: 1px solid #b5b5b5;
+  text-align: center;
 }
 footer .footer__text {
   display: flex;
@@ -983,6 +1031,71 @@ footer .footer__social_mail:hover {
   border: 2px solid #dd4b4b;
   background-image: url("./img/socials/act/mail.png");
   background-color: #dd4b4b;
+}
+footer .promo {
+  margin-bottom: 44px;
+}
+footer .promo__header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+footer .promo__img {
+  width: 32px;
+  height: 32px;
+}
+footer .promo__title span {
+  font-family: "Roboto Condensed";
+  font-size: 17.1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #b1b1b1;
+}
+footer .promo__link {
+  font-family: "Arial";
+  font-size: 13.1px;
+  font-weight: 400;
+  color: #777777;
+  text-transform: none;
+}
+footer .promo__text {
+  font-family: Arial;
+  font-size: 14.1px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #888888;
+}
+footer .promo__text span {
+  color: #ccc;
+}
+footer .promo__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Arial";
+  font-size: 13.1px;
+  font-weight: 400;
+  color: #666666;
+  width: 100%;
+  margin-top: 18px;
+}
+footer .promo__forward {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+footer .promo__reply, footer .promo__retweet {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #666666;
 }
 
 .arrow-up {

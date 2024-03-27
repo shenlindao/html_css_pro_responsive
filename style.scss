@@ -756,6 +756,7 @@ footer {
         &__arrow {
             width: 20px;
             height: 20px;
+            cursor: pointer;
             &_right {
                 transform: rotate(180deg);
             }
@@ -763,6 +764,12 @@ footer {
         &__img {
             background-color: $backgroundColor;
             margin-bottom: 20px;
+            &_60 {
+                width: 60px;
+                height: 60px;
+                border: 5px solid #2f2f2f;;
+                margin-bottom: 0;
+            }
             &_150 {
                 width: 150px;
                 height: 195px;
@@ -834,6 +841,10 @@ footer {
             background-color: rgba(250, 250, 250, 0);
             border: 1px solid #b5b5b5;
             text-align: center;
+            &:hover {
+                background-color: #b5b5b5;
+                color: #1f1f1f;
+            }
         }
         &__text {
             @include flexWrap();
@@ -1000,6 +1011,22 @@ footer {
                     background-color: #dd4b4b;
                 }
             }
+        }
+        &__like-counter {
+            font-family: "Arial";
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            color: #888888;
+            margin-bottom: 22px;
+            & span {
+                color: $backgroundColor;
+            }
+        }
+        &__facebook {
+            @include flexWrap();
+            flex-direction: row;
+            gap: 23px;
         }
     }
     .promo {

@@ -778,6 +778,7 @@ footer .footer__arrows {
 footer .footer__arrow {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 footer .footer__arrow_right {
   transform: rotate(180deg);
@@ -785,6 +786,12 @@ footer .footer__arrow_right {
 footer .footer__img {
   background-color: #ccc;
   margin-bottom: 20px;
+}
+footer .footer__img_60 {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #2f2f2f;
+  margin-bottom: 0;
 }
 footer .footer__img_150 {
   width: 150px;
@@ -859,6 +866,10 @@ footer .footer__button {
   background-color: rgba(250, 250, 250, 0);
   border: 1px solid #b5b5b5;
   text-align: center;
+}
+footer .footer__button:hover {
+  background-color: #b5b5b5;
+  color: #1f1f1f;
 }
 footer .footer__text {
   display: flex;
@@ -1031,6 +1042,23 @@ footer .footer__social_mail:hover {
   border: 2px solid #dd4b4b;
   background-image: url("./img/socials/act/mail.png");
   background-color: #dd4b4b;
+}
+footer .footer__like-counter {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: #888888;
+  margin-bottom: 22px;
+}
+footer .footer__like-counter span {
+  color: #ccc;
+}
+footer .footer__facebook {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 23px;
 }
 footer .promo {
   margin-bottom: 44px;

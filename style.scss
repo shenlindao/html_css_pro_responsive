@@ -717,19 +717,31 @@ footer {
             display: grid;
             grid-template-columns: 1fr 399px 1fr;
             margin-top: 30px;
+            border-bottom: 2px dotted #2a2a2a;
         }
         &__column {
             border-right: 2px dotted #2a2a2a;
             &_left {
-                padding-right: 25px;
+                max-width: 475px;
+                .footer__block {
+                    padding-right: 25px;
+                }
             }
             &_center {
-                padding-right: 25px;
-                padding-left: 25px;
+                .footer__block {
+                    padding-right: 25px;
+                    padding-left: 25px;
+                }
+                .footer__block:nth-child(2) {
+                    padding-bottom: 6px;
+                }
             }
             &_right {
-                padding-left: 25px;
-                border-right: none;
+                .footer__block {
+                    border-right: none;
+                    padding-left: 25px;
+                    align-content: flex-start;
+                }
             }
         }
         &__content {
@@ -767,7 +779,7 @@ footer {
             &_60 {
                 width: 60px;
                 height: 60px;
-                border: 5px solid #2f2f2f;;
+                border: 5px solid #2f2f2f;
                 margin-bottom: 0;
             }
             &_150 {
@@ -814,9 +826,12 @@ footer {
         &__block {
             @include flexWrap();
             flex-direction: column;
-            align-content: flex-end;
             padding-bottom: 60px;
             border-bottom: 2px dotted #2a2a2a;
+            box-sizing: border-box;
+            &:last-child {
+                border-bottom: none;
+            }
         }
         &__title {
             @include flexWrap();
@@ -883,6 +898,35 @@ footer {
                 resize: none;
                 width: 100%;
                 box-sizing: border-box;
+            }
+        }
+        &__input {
+            position: relative;
+            & input {
+                width: 100%;
+                height: 50px;
+                font-family: "Cousine";
+                font-size: 13px;
+                line-height: 27px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #888888;
+                padding: 21px 20px;
+                width: 100%;
+                height: 50px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 1px solid #666666;
+                box-sizing: border-box;
+            }
+            & button {
+                position: absolute;
+                top: 12px;
+                right: 20px;
+                background-color: transparent;
+                border: 0;
+                font-size: 25px;
+                color: #999999;
+                cursor: pointer;
             }
         }
         &__link {
@@ -1027,6 +1071,21 @@ footer {
             @include flexWrap();
             flex-direction: row;
             gap: 23px;
+        }
+        &__menu {
+            list-style: none;
+            font-family: "Arial";
+            font-size: 14px;
+            font-weight: 400;
+            & a {
+                color: #888888;
+            }
+            li {
+                margin-bottom: 19px;
+            }
+            li:last-child {
+                margin-bottom: 0;
+            }
         }
     }
     .promo {

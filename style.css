@@ -736,20 +736,28 @@ footer .footer__main {
   display: grid;
   grid-template-columns: 1fr 399px 1fr;
   margin-top: 30px;
+  border-bottom: 2px dotted #2a2a2a;
 }
 footer .footer__column {
   border-right: 2px dotted #2a2a2a;
 }
 footer .footer__column_left {
+  max-width: 475px;
+}
+footer .footer__column_left .footer__block {
   padding-right: 25px;
 }
-footer .footer__column_center {
+footer .footer__column_center .footer__block {
   padding-right: 25px;
   padding-left: 25px;
 }
-footer .footer__column_right {
-  padding-left: 25px;
+footer .footer__column_center .footer__block:nth-child(2) {
+  padding-bottom: 6px;
+}
+footer .footer__column_right .footer__block {
   border-right: none;
+  padding-left: 25px;
+  align-content: flex-start;
 }
 footer .footer__content {
   display: flex;
@@ -838,9 +846,12 @@ footer .footer__block {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-content: flex-end;
   padding-bottom: 60px;
   border-bottom: 2px dotted #2a2a2a;
+  box-sizing: border-box;
+}
+footer .footer__block:last-child {
+  border-bottom: none;
 }
 footer .footer__title {
   display: flex;
@@ -911,6 +922,35 @@ footer .footer__form textarea {
   resize: none;
   width: 100%;
   box-sizing: border-box;
+}
+footer .footer__input {
+  position: relative;
+}
+footer .footer__input input {
+  width: 100%;
+  height: 50px;
+  font-family: "Cousine";
+  font-size: 13px;
+  line-height: 27px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #888888;
+  padding: 21px 20px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #666666;
+  box-sizing: border-box;
+}
+footer .footer__input button {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  background-color: transparent;
+  border: 0;
+  font-size: 25px;
+  color: #999999;
+  cursor: pointer;
 }
 footer .footer__link {
   font-family: "Merriweather Sans";
@@ -1059,6 +1099,21 @@ footer .footer__facebook {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 23px;
+}
+footer .footer__menu {
+  list-style: none;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 400;
+}
+footer .footer__menu a {
+  color: #888888;
+}
+footer .footer__menu li {
+  margin-bottom: 19px;
+}
+footer .footer__menu li:last-child {
+  margin-bottom: 0;
 }
 footer .promo {
   margin-bottom: 44px;

@@ -804,6 +804,9 @@ footer .footer__img_60 {
   border: 5px solid #2f2f2f;
   margin-bottom: 0;
 }
+footer .footer__img_120 {
+  display: none;
+}
 footer .footer__img_150 {
   width: 150px;
   height: 195px;
@@ -844,6 +847,7 @@ footer .footer__prod_price {
 footer .footer__prod_price_old {
   color: #8c8b8b;
   margin-bottom: 3px;
+  text-decoration: line-through;
 }
 footer .footer__block {
   display: flex;
@@ -889,7 +893,6 @@ footer .footer__text {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 15px;
   width: 247px;
   font-family: "Arial";
   font-size: 14px;
@@ -991,6 +994,9 @@ footer .footer__rights {
   line-height: 18px;
   font-weight: 400;
   color: #666666;
+}
+footer .footer__rights_mobile {
+  display: none;
 }
 footer .footer__block2 {
   display: flex;
@@ -1559,18 +1565,24 @@ footer .promo__reply, footer .promo__retweet {
   footer .footer__column_left .footer__block {
     padding-right: 14px;
   }
+  footer .footer__column_left .footer__block .footer__content {
+    justify-content: flex-start;
+  }
   footer .footer__column_right .footer__block {
     padding-left: 14px;
   }
-  footer .footer__column__center__block {
+  footer .footer__column_center .footer__block {
     padding-right: 14px;
     padding-left: 14px;
   }
-  footer .footer__column .footer__inner_right {
+  footer .footer__column_center .footer__inner_right {
     display: none;
   }
-  footer .footer__block_from .footer__inner_right {
+  footer .footer__block_second .footer__inner_right {
     display: none;
+  }
+  footer .footer__block_first .footer__link {
+    line-height: 45px;
   }
   footer .footer__block2 {
     margin-right: 0;
@@ -1578,13 +1590,19 @@ footer .promo__reply, footer .promo__retweet {
   footer .footer__img_60 {
     border: 3px solid #2f2f2f;
   }
+  footer .footer__img_120 {
+    display: block;
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 19px;
+  }
   footer .footer__img_150 {
     width: 218px;
     height: 285px;
   }
   footer .footer__img_180 {
-    width: 120px;
-    height: 120px;
+    display: none;
   }
   footer .footer__img_205 {
     width: 280px;
@@ -1592,6 +1610,14 @@ footer .promo__reply, footer .promo__retweet {
   }
   footer .footer__img_map {
     margin-bottom: 10px;
+  }
+  footer .footer__text {
+    float: right;
+    display: block;
+    width: auto;
+  }
+  footer .footer__text span {
+    margin-bottom: 17px;
   }
   footer .footer__inner {
     font-size: 15px;
@@ -1603,8 +1629,18 @@ footer .promo__reply, footer .promo__retweet {
     gap: 8px;
     margin-bottom: 0;
   }
+  footer .footer__bottom {
+    align-items: flex-start;
+    padding-top: 40px;
+    height: 141px;
+  }
   footer .promo__date {
     margin-bottom: 10px;
+  }
+  footer .arrow-up {
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%, 0) rotate(90deg);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1871,5 +1907,51 @@ footer .promo__reply, footer .promo__retweet {
   }
   .product__picture {
     height: 364px;
+  }
+  footer .footer__main {
+    grid-template-columns: 1fr;
+  }
+  footer .footer__column {
+    margin-top: 10px;
+  }
+  footer .footer__column_left .footer__block, footer .footer__column_center .footer__block {
+    align-content: center;
+  }
+  footer .footer__column_center {
+    align-content: center;
+  }
+  footer .footer__column_center .footer__inner_right {
+    display: block;
+  }
+  footer .footer__img_150 {
+    width: 130px;
+    height: 169px;
+  }
+  footer .footer__facebook {
+    justify-content: space-around;
+    gap: 30px;
+  }
+  footer .footer__bottom {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 331px;
+    gap: 22px;
+  }
+  footer .footer__prices {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+  footer .footer__prod_price_old {
+    margin-right: 8px;
+  }
+  footer .footer__rights_fullscreen {
+    display: none;
+  }
+  footer .footer__rights_mobile {
+    margin-top: 20px;
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

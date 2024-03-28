@@ -1185,6 +1185,8 @@ footer {
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
+    width: 100%;
+    max-width: 1170px;
     height: 425px;
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
@@ -1597,6 +1599,57 @@ footer {
     }
     .arrow-up {
         right: 21px;
+    }
+    .menu {
+        height: 390px;
+        width: calc(100% - 100px);
+        padding: 40px 20px;
+        &__banner {
+            &_190 {
+                display: none;
+            }
+        }
+        &__title {
+            min-width: 220px;
+        }
+        &__banner {
+            &_342 {
+                width: 280px;
+                height: 106px;
+            }
+            &_first {
+                &_text1 {
+                    font-size: 16.4px;
+                }
+                &_text2 {
+                    font-size: 12.3px;
+                }
+                &_text3 {
+                    font-size: 27.8px;
+                }
+            }
+            &_second {
+                &_text1 {
+                    font-size: 28.6px;
+                }
+            }
+            &_third {
+                &_text1 {
+                    font-size: 29.4px;
+                }
+                &_text2 {
+                    font-size: 22.9px;
+                }
+                &_text3 {
+                    font-size: 23.7px;
+                }
+            }
+            &_content {
+                &_third {
+                    margin-left: 41px;
+                }
+            }
+        }
     }
 }
 

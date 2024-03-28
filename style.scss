@@ -168,6 +168,9 @@ a {
         text-transform: uppercase;
         a {
             color: #565656;
+            &:hover {
+                color: #cf4647;
+            }
         }
     }
     &__mobile_menu {
@@ -1180,6 +1183,7 @@ footer {
 }
 
 .menu {
+    display: none;
     position: absolute;
     top: 138px;
     left: 50%;
@@ -1322,7 +1326,6 @@ footer {
             &_text1 {
                 font-family: "Merriweather Sans";
                 font-size: 36px;
-                line-height: 32px;
                 font-weight: 800;
                 text-transform: uppercase;
                 color: #ffffff;
@@ -1330,7 +1333,6 @@ footer {
             &_text2 {
                 font-family: "Roboto Condensed";
                 font-size: 28px;
-                line-height: 32px;
                 font-weight: 700;
                 text-transform: uppercase;
                 color: #ffffff;
@@ -1338,7 +1340,6 @@ footer {
             &_text3 {
                 font-family: "Roboto Condensed";
                 font-size: 29px;
-                line-height: 32px;
                 font-weight: 700;
                 text-transform: uppercase;
                 color: #ffffff;
@@ -1604,15 +1605,13 @@ footer {
         height: 390px;
         width: calc(100% - 100px);
         padding: 40px 20px;
-        &__banner {
-            &_190 {
-                display: none;
-            }
-        }
         &__title {
             min-width: 220px;
         }
         &__banner {
+            &_190 {
+                display: none;
+            }
             &_342 {
                 width: 280px;
                 height: 106px;
@@ -1913,6 +1912,66 @@ footer {
             left: 50%;
             bottom: 28px;
             transform: translate(-50%, 0) rotate(90deg);
+        }
+    }
+    .menu {
+        top: 167px;
+        width: calc(100% - 80px);
+        height: 340px;
+        padding: 40px 20px 31px 20px;
+        &__title {
+            min-width: 172px;
+            &::after {
+                width: 32%;
+            }
+        }
+        &__banner {
+            &_190 {
+                display: none;
+            }
+            &_342 {
+                width: 214px;
+                height: 81px;
+            }
+            &_first {
+                &_text1 {
+                    font-size: 12.5px;
+                }
+                &_text2 {
+                    font-size: 9.4px;
+                    &::before,
+                    &::after {
+                        width: 18%;
+                    }
+                }
+                &_text3 {
+                    font-size: 21.2px;
+                }
+            }
+            &_second {
+                &_text1 {
+                    font-size: 21.9px;
+                }
+            }
+            &_third {
+                &_text1 {
+                    font-size: 22.5px;
+                }
+                &_text2 {
+                    font-size: 17.5px;
+                }
+                &_text3 {
+                    font-size: 18.1px;
+                }
+            }
+            &_content {
+                &_third {
+                    margin-left: 31px;
+                }
+            }
+        }
+        &__bottom {
+            margin-top: 30px;
         }
     }
 }

@@ -183,6 +183,9 @@ a {
 .header__menu a {
   color: #565656;
 }
+.header__menu a:hover {
+  color: #cf4647;
+}
 .header__mobile_menu {
   display: none;
 }
@@ -1207,6 +1210,7 @@ footer .promo__reply, footer .promo__retweet {
 }
 
 .menu {
+  display: none;
   position: absolute;
   top: 138px;
   left: 50%;
@@ -1355,7 +1359,6 @@ footer .promo__reply, footer .promo__retweet {
 .menu__banner_third_text1 {
   font-family: "Merriweather Sans";
   font-size: 36px;
-  line-height: 32px;
   font-weight: 800;
   text-transform: uppercase;
   color: #ffffff;
@@ -1363,7 +1366,6 @@ footer .promo__reply, footer .promo__retweet {
 .menu__banner_third_text2 {
   font-family: "Roboto Condensed";
   font-size: 28px;
-  line-height: 32px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
@@ -1371,7 +1373,6 @@ footer .promo__reply, footer .promo__retweet {
 .menu__banner_third_text3 {
   font-family: "Roboto Condensed";
   font-size: 29px;
-  line-height: 32px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
@@ -1610,11 +1611,11 @@ footer .promo__reply, footer .promo__retweet {
     width: calc(100% - 100px);
     padding: 40px 20px;
   }
-  .menu__banner_190 {
-    display: none;
-  }
   .menu__title {
     min-width: 220px;
+  }
+  .menu__banner_190 {
+    display: none;
   }
   .menu__banner_342 {
     width: 280px;
@@ -1869,6 +1870,55 @@ footer .promo__reply, footer .promo__retweet {
     left: 50%;
     bottom: 28px;
     transform: translate(-50%, 0) rotate(90deg);
+  }
+  .menu {
+    top: 167px;
+    width: calc(100% - 80px);
+    height: 340px;
+    padding: 40px 20px 31px 20px;
+  }
+  .menu__title {
+    min-width: 172px;
+  }
+  .menu__title::after {
+    width: 32%;
+  }
+  .menu__banner_190 {
+    display: none;
+  }
+  .menu__banner_342 {
+    width: 214px;
+    height: 81px;
+  }
+  .menu__banner_first_text1 {
+    font-size: 12.5px;
+  }
+  .menu__banner_first_text2 {
+    font-size: 9.4px;
+  }
+  .menu__banner_first_text2::before, .menu__banner_first_text2::after {
+    width: 18%;
+  }
+  .menu__banner_first_text3 {
+    font-size: 21.2px;
+  }
+  .menu__banner_second_text1 {
+    font-size: 21.9px;
+  }
+  .menu__banner_third_text1 {
+    font-size: 22.5px;
+  }
+  .menu__banner_third_text2 {
+    font-size: 17.5px;
+  }
+  .menu__banner_third_text3 {
+    font-size: 18.1px;
+  }
+  .menu__banner_content_third {
+    margin-left: 31px;
+  }
+  .menu__bottom {
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 767px) {

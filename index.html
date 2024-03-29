@@ -807,25 +807,23 @@
         </div>
         <a href="#" class="arrow-up"></a>
     </footer>
-</body>
-
-</html>
-
-<script>
-    const menuLinks = document.querySelectorAll('.header__menu_li');
-    const menu = document.querySelector('.menu');
-
-    menuLinks.forEach(link => {
-        link.addEventListener('mouseover', function () {
-            menu.style.display = 'block';
-        });
-        link.addEventListener('mouseout', function () {
-            menu.addEventListener('mouseover', function () {
+    <script>
+        const menuLinks = document.querySelectorAll('.header__menu_li');
+        const menu = document.querySelector('.menu');
+    
+        menuLinks.forEach(link => {
+            link.addEventListener('mouseover', function () {
                 menu.style.display = 'block';
             });
-            menu.addEventListener('mouseout', function () {
-                menu.style.display = 'none';
+            link.addEventListener('mouseout', function () {
+                menu.addEventListener('mouseover', function () {
+                    menu.style.display = 'block';
+                });
+                menu.addEventListener('mouseout', function () {
+                    menu.style.display = 'none';
+                });
             });
         });
-    });
-</script>
+    </script>
+</body>
+</html>
